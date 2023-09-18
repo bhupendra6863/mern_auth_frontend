@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { NavLink ,useNavigate} from "react-router-dom"
 import { ToastContainer, toast } from 'react-toastify';
 import "./mix.css"
+const BASE_URL = process.env.REACT_APP_BASE_URL;
 
 const Login = () => {
 
@@ -52,7 +53,7 @@ const Login = () => {
             // console.log("user login succesfully done");
 
 
-            const data = await fetch("/login",{
+            const data = await fetch(`${BASE_URL}/login`,{
                 method:"POST",
                 headers:{
                     "Content-Type":"application/json"

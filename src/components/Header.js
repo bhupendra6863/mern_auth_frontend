@@ -5,7 +5,7 @@ import { LoginContext } from './ContextProvider/Context';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import { useNavigate , NavLink } from "react-router-dom"
-// const BASE_URL = process.env.REACT_APP_BASE_URL;
+const BASE_URL = process.env.REACT_APP_BASE_URL;
 
 const Header = () => {
 
