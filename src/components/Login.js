@@ -52,7 +52,7 @@ const Login = () => {
             // console.log("user login succesfully done");
 
 
-            const data = await fetch("https://mern-auth-backend-syyq.onrender.com/login",{
+            const data = await fetch("/login",{
                 method:"POST",
                 headers:{
                     "Content-Type":"application/json"
@@ -61,8 +61,10 @@ const Login = () => {
                      email, password
                 })
             });
-
+            console.log(data);
+            
             const res = await data.json();
+            console.log(res);
             //  console.log(res);
 
             if(res.status === 201){

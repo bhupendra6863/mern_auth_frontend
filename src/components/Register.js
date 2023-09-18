@@ -3,6 +3,7 @@ import { NavLink } from "react-router-dom"
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import "./mix.css"
+// const BASE_URL = process.env.REACT_APP_BASE_URL;
 
 const Register = () => {
 
@@ -71,7 +72,7 @@ const Register = () => {
             // console.log("user registration succesfully done");
 
 
-            const data = await fetch(`https://mern-auth-backend-syyq.onrender.com/register`, {
+            const data = await fetch(`/register`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
@@ -81,6 +82,7 @@ const Register = () => {
                 })
             });
             console.log("before json");
+            console.log(data);
             const res = await data.json();
             // console.log(res.status);
 
